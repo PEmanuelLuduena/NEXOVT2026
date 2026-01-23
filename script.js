@@ -1,24 +1,39 @@
+// =======================
 // Tema claro / oscuro
+// =======================
 const toggle = document.getElementById("themeToggle");
 const html = document.documentElement;
 
-toggle.addEventListener("click", () => {
-  html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
-  toggle.textContent = html.dataset.theme === "dark" ? "🌙" : "☀️";
-});
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+    toggle.textContent = html.dataset.theme === "dark" ? "🌙" : "☀️";
+  });
+}
 
-// Mensaje enviado
+// =======================
+// Mensaje formulario
+// =======================
 const form = document.querySelector(".contact-form");
 const success = document.getElementById("form-success");
 
-form.addEventListener("submit", () => {
-  setTimeout(() => {
-    form.reset();
-    success.style.display = "block";
-  }, 500);
-});
+if (form && success) {
+  form.addEventListener("submit", () => {
+    setTimeout(() => {
+      form.reset();
+      success.style.display = "block";
 
+      setTimeout(() => {
+        success.style.display = "none";
+      }, 5000);
+
+    }, 500);
+  });
+}
+
+// =======================
 // Reveal scroll
+// =======================
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
