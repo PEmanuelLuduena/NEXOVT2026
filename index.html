@@ -1,108 +1,116 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexoVt - Agencia de VTubers</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexoVt - Agencia de VTubers</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="logo">NexoVt</div>
+  <div class="logo">NexoVt</div>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-    <div class="header-actions">
-        <button id="themeToggle" aria-label="Cambiar tema">🌙</button>
-        <button class="btn-contact" onclick="location.href='#contacto'">Contáctanos</button>
-    </div>
+  <div class="header-actions">
+    <button id="themeToggle">🌙</button>
+    <button class="btn-contact" onclick="location.href='#contacto'">Contáctanos</button>
+  </div>
 </header>
 
 <section class="hero" id="inicio">
-    <div class="hero-content">
-        <h1>Bienvenido a <span>NexoVt</span></h1>
-        <p>Conectamos talentos virtuales con oportunidades reales en el mundo del streaming.</p>
+  <div class="hero-content">
+    <h1>Bienvenido a <span>NexoVt</span></h1>
+    <p>Conectamos talentos virtuales con oportunidades reales en el mundo del streaming.</p>
 
-        <div class="button-group">
-            <button class="btn btn-primary" onclick="location.href='#contacto'">Únete</button>
-            <button class="btn btn-secondary" onclick="location.href='#sobre'">Conocer más</button>
-        </div>
+    <div class="button-group">
+      <button class="btn btn-primary" onclick="location.href='#contacto'">Únete</button>
+      <button class="btn btn-secondary" onclick="location.href='#sobre'">Conocer más</button>
     </div>
-    <div class="hero-icon">🎭</div>
+  </div>
+
+  <div class="hero-icon">🎭</div>
 </section>
 
 <main>
 
-    <!-- SOBRE NOSOTROS -->
-    <section class="about" id="sobre">
-        <h2>Sobre Nosotros</h2>
-        <p>
-            NexoVt es una agencia dedicada a impulsar VTubers y creadores virtuales.
-            Brindamos apoyo técnico, creativo y estratégico para que cada talento
-            pueda crecer de forma profesional y sostenible.
-        </p>
-    </section>
+  <!-- SOBRE -->
+  <section class="about reveal" id="sobre">
+    <h2>Sobre <span>NexoVt</span></h2>
+    <p>
+      Somos una agencia enfocada en impulsar VTubers, brindando soporte técnico,
+      creativo y estratégico para crecer de forma profesional.
+    </p>
+  </section>
 
-    <!-- SERVICIOS -->
-    <section class="services" id="servicios">
-        <h2>Servicios</h2>
+  <!-- SERVICIOS -->
+  <section class="services reveal" id="servicios">
+    <h2>Nuestros <span>Servicios</span></h2>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Gestión de Talentos</h3>
-                <p>Asesoramiento, planificación de contenido y crecimiento de marca.</p>
-            </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🎨</div>
+        <h3>Diseño de Avatares</h3>
+        <p>Avatares 2D y 3D listos para streaming.</p>
+      </div>
 
-            <div class="service-card">
-                <h3>Soporte Técnico</h3>
-                <p>Configuración de streaming, modelos, overlays y herramientas.</p>
-            </div>
+      <div class="service-card">
+        <div class="icon">🎬</div>
+        <h3>Producción</h3>
+        <p>Ayuda con streams, clips y contenido.</p>
+      </div>
 
-            <div class="service-card">
-                <h3>Diseño y Branding</h3>
-                <p>Identidad visual, redes sociales y presencia profesional.</p>
-            </div>
-        </div>
-    </section>
+      <div class="service-card">
+        <div class="icon">📈</div>
+        <h3>Crecimiento</h3>
+        <p>Estrategias para crecer en plataformas.</p>
+      </div>
 
-    <!-- CONTACTO -->
-    <section class="contact" id="contacto">
-        <h2>Contacto</h2>
-        <p>Escribinos y nos ponemos en contacto.</p>
+      <div class="service-card">
+        <div class="icon">🤝</div>
+        <h3>Colaboraciones</h3>
+        <p>Conectamos talentos con oportunidades.</p>
+      </div>
+    </div>
+  </section>
 
-        <form
-            class="contact-form"
-            action="https://formsubmit.co/nexovt50@gmail.com"
-            method="POST"
-        >
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde NexoVt">
-            <input type="hidden" name="_next" value="https://nexovt2026.pages.dev/#contacto">
+  <!-- CONTACTO -->
+  <section class="contact reveal" id="contacto">
+    <h2>Contacto</h2>
+    <p>Escribinos y nos ponemos en contacto.</p>
 
-            <input type="text" name="name" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+    <form
+      class="contact-form"
+      action="https://formsubmit.co/nexovt50@gmail.com"
+      method="POST"
+    >
+      <input type="hidden" name="_next" value="https://nexovt2026.pages.dev/#contacto">
+      <input type="hidden" name="_captcha" value="false">
 
-            <button type="submit" class="btn btn-primary">
-                Enviar mensaje
-            </button>
-        </form>
-    </section>
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+
+      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+    </form>
+
+    <p id="form-success" class="form-success">
+      ✅ Mensaje enviado correctamente. Te responderemos pronto.
+    </p>
+  </section>
 
 </main>
 
 <footer>
-    <p>&copy; 2026 NexoVt - Agencia Profesional de VTubers</p>
+  <p>&copy; 2026 NexoVt - Agencia Profesional de VTubers</p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-

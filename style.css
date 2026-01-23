@@ -1,6 +1,3 @@
-/* =======================
-   VARIABLES DE TEMA
-======================= */
 :root {
   --bg: #0f0f0f;
   --bg-card: #1a1a1a;
@@ -16,9 +13,6 @@
   --muted: #555;
 }
 
-/* =======================
-   RESET Y BASE
-======================= */
 * {
   margin: 0;
   padding: 0;
@@ -35,9 +29,6 @@ body {
   font-family: "Segoe UI", sans-serif;
 }
 
-/* =======================
-   HEADER
-======================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -47,7 +38,6 @@ header {
   position: sticky;
   top: 0;
   background: var(--bg);
-  z-index: 10;
 }
 
 .logo {
@@ -64,11 +54,6 @@ nav {
 nav a {
   color: var(--text);
   text-decoration: none;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: var(--accent);
 }
 
 .header-actions {
@@ -81,7 +66,6 @@ nav a:hover {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: var(--text);
 }
 
 .btn-contact {
@@ -91,31 +75,17 @@ nav a:hover {
   border-radius: 20px;
   font-weight: 600;
   cursor: pointer;
-  color: #fff;
 }
 
-/* =======================
-   HERO
-======================= */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 4rem 2rem;
-  gap: 2rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
 }
 
 .hero h1 span {
   color: var(--accent);
-}
-
-.hero p {
-  margin-top: 1rem;
-  color: var(--muted);
 }
 
 .hero-icon {
@@ -128,15 +98,11 @@ nav a:hover {
   margin-top: 1.5rem;
 }
 
-/* =======================
-   BOTONES
-======================= */
 .btn {
   padding: 0.8rem 2rem;
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  font-weight: 600;
 }
 
 .btn-primary {
@@ -150,97 +116,75 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* =======================
-   MAIN
-======================= */
 main {
   padding: 3rem 2rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
-/* =======================
-   SOBRE NOSOTROS
-======================= */
+/* SOBRE */
 .about {
   background: var(--bg-card);
   padding: 3rem;
   border-radius: 12px;
-  margin-bottom: 3rem;
   border: 2px solid var(--accent);
   text-align: center;
-}
-
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.about p {
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/* =======================
-   SERVICIOS
-======================= */
-.services {
   margin-bottom: 3rem;
+}
+
+/* SERVICIOS */
+.services {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.services h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* GRID */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-/* CARD */
 .service-card {
   background: var(--bg-card);
   padding: 2rem;
-  border-radius: 14px;
+  border-radius: 16px;
+  position: relative;
   border: 2px solid transparent;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,140,0,0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border: 2px solid var(--accent);
+  transform: translateY(-10px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.service-card h3 {
-  color: var(--accent);
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
+.service-card:hover::before {
+  opacity: 1;
 }
 
-.service-card p {
-  color: var(--muted);
-  line-height: 1.5;
+.service-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-/* =======================
-   CONTACTO
-======================= */
+/* CONTACTO */
 .contact {
   background: var(--bg-card);
   padding: 3rem;
   border-radius: 12px;
   text-align: center;
   border: 2px solid var(--accent);
-}
-
-.contact p {
-  color: var(--muted);
 }
 
 .contact-form {
@@ -255,36 +199,29 @@ main {
   padding: 0.8rem;
   border-radius: 6px;
   border: none;
-  font-family: inherit;
 }
 
-.contact-form button {
-  margin-top: 1rem;
+.form-success {
+  display: none;
+  margin-top: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
 }
 
-/* =======================
-   FOOTER
-======================= */
+/* ANIMACIONES */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 footer {
   text-align: center;
   padding: 2rem;
   color: var(--muted);
-}
-
-/* =======================
-   RESPONSIVE
-======================= */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-icon {
-    font-size: 100px;
-  }
-
-  nav {
-    display: none;
-  }
 }
