@@ -1,41 +1,78 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
+  <link rel="canonical" href="https://nexovt2026.pages.dev/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexoVt - Agencia de VTubers</title>
-  <link rel="stylesheet" href="style.css">
+  <html lang="es-AR" data-theme="dark">
+  <title>NexoVt | Comunidad y apoyo para VTubers</title>
+
+<meta name="description" content="NexoVt es una comunidad creada para ayudar VTubers a crecer, aprender y conectar con otros creadores sin contratos ni ataduras.">
+
+<meta name="keywords" content="vtubers, comunidad vtuber, vtuber español, streaming, vtuber argentina">
+
+<meta name="author" content="NexoVt">
+
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="NexoVt | Comunidad para VTubers">
+<meta property="og:description" content="Un espacio creado para ayudar VTubers a crecer, aprender y conectar con la comunidad.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexovt2026.pages.dev/">
+<meta property="og:image" content="https://nexovt2026.pages.dev/og-image.png">
+
+<meta name="theme-color" content="#ff8c00">
+<meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Favicon (cuando tengas uno) -->
+  <!-- <link rel="icon" href="favicon.ico"> -->
+
+<link rel="preload" href="style.css" as="style">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 
 <header>
   <div class="logo">NexoVt</div>
 
-  <nav>
+  <nav aria-label="Navegación principal">
     <a href="#inicio">Inicio</a>
     <a href="#sobre">Sobre</a>
     <a href="#servicios">Servicios</a>
+    <a href="#vtubers">VTubers</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
   <div class="header-actions">
-    <button id="themeToggle">🌙</button>
-    <button class="btn-contact" onclick="location.href='#contacto'">Contáctanos</button>
+    <button id="themeToggle" aria-label="Cambiar tema">🌙</button>
+    <button class="btn-contact" onclick="location.href='#contacto'">
+      Contáctanos
+    </button>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-content">
     <h1>Bienvenido a <span>NexoVt</span></h1>
-    <p>Conectamos talentos virtuales con oportunidades reales en el mundo del streaming.</p>
+    <p>
+      Un espacio creado para ayudar VTubers a crecer, aprender
+      y conectarse con la comunidad.
+    </p>
 
     <div class="button-group">
-      <button class="btn btn-primary" onclick="location.href='#contacto'">Únete</button>
-      <button class="btn btn-secondary" onclick="location.href='#sobre'">Conocer más</button>
+      <button class="btn btn-primary" onclick="location.href='#contacto'">
+        Unirse
+      </button>
+      <button class="btn btn-secondary" onclick="location.href='#sobre'">
+        Conocer más
+      </button>
     </div>
   </div>
 
-  <div class="hero-icon">🎭</div>
+  <div class="hero-icon" aria-hidden="true">🎭</div>
 </section>
 
 <main>
@@ -44,9 +81,77 @@
   <section class="about reveal" id="sobre">
     <h2>Sobre <span>NexoVt</span></h2>
     <p>
-      Somos una agencia enfocada en impulsar VTubers, brindando soporte técnico,
-      creativo y estratégico para crecer de forma profesional.
+      NexoVt es una plataforma comunitaria pensada para apoyar VTubers.
+      Compartimos recursos, visibilidad y un espacio seguro
+      para crecer en el mundo del streaming sin contratos ni ataduras.
     </p>
+  </section>
+
+  <!-- COMO AYUDAMOS -->
+  <section class="how-help reveal" id="como-ayudamos">
+    <h2>¿Cómo <span>ayudamos</span>?</h2>
+
+    <div class="help-grid">
+      <article class="help-card">
+        <div class="icon">📚</div>
+        <h3>Guías y recursos</h3>
+        <p>
+          Información clara para empezar y mejorar como VTuber:
+          configuración, ideas y consejos reales.
+        </p>
+      </article>
+
+      <article class="help-card">
+        <div class="icon">📣</div>
+        <h3>Visibilidad</h3>
+        <p>
+          Apoyamos mostrando contenido y proyectos
+          dentro de la comunidad.
+        </p>
+      </article>
+
+      <article class="help-card">
+        <div class="icon">🤝</div>
+        <h3>Comunidad</h3>
+        <p>
+          Un espacio para conocer VTubers,
+          compartir experiencias y crecer juntos.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- VTUBERS NUEVOS -->
+  <section class="new-vtubers reveal" id="vtubers-nuevos">
+    <h2>Para <span>VTubers nuevos</span></h2>
+    <p class="subtitle">
+      Si estás empezando, este espacio es para vos.
+    </p>
+
+    <div class="new-grid">
+      <article class="new-card">
+        <h3>🎭 Sin experiencia previa</h3>
+        <p>
+          Podés unirte aunque estés dando tus primeros pasos.
+        </p>
+      </article>
+
+      <article class="new-card">
+        <h3>🔓 Sin contratos</h3>
+        <p>
+          No hay exclusividad ni obligaciones.
+          El control siempre es tuyo.
+        </p>
+      </article>
+
+      <article class="new-card">
+        <h3>🚀 Crecimiento real</h3>
+        <p>
+          Aprendé, conectá con otros VTubers
+          y mejorá a tu ritmo.
+        </p>
+      </article>
+    </div>
   </section>
 
   <!-- SERVICIOS -->
@@ -54,63 +159,64 @@
     <h2>Nuestros <span>Servicios</span></h2>
 
     <div class="services-grid">
-      <div class="service-card">
+      <article class="service-card">
         <div class="icon">🎨</div>
-        <h3>Diseño de Avatares</h3>
-        <p>Avatares 2D y 3D listos para streaming.</p>
-      </div>
+        <h3>Diseño</h3>
+        <p>Avatares y gráficos para streaming.</p>
+      </article>
 
-      <div class="service-card">
+      <article class="service-card">
         <div class="icon">🎬</div>
-        <h3>Producción</h3>
-        <p>Ayuda con streams, clips y contenido.</p>
-      </div>
+        <h3>Contenido</h3>
+        <p>Ayuda con streams, clips y organización.</p>
+      </article>
 
-      <div class="service-card">
+      <article class="service-card">
         <div class="icon">📈</div>
         <h3>Crecimiento</h3>
-        <p>Estrategias para crecer en plataformas.</p>
-      </div>
+        <p>Consejos para mejorar visibilidad.</p>
+      </article>
 
-      <div class="service-card">
+      <article class="service-card">
         <div class="icon">🤝</div>
         <h3>Colaboraciones</h3>
-        <p>Conectamos talentos con oportunidades.</p>
-      </div>
+        <p>Conexión con otros VTubers.</p>
+      </article>
     </div>
   </section>
 
-<section class="vtubers reveal" id="vtubers">
-  <h2>Nuestros <span>VTubers</span></h2>
+  <!-- VTUBERS -->
+  <section class="vtubers reveal" id="vtubers">
+    <h2>Nuestros <span>VTubers</span></h2>
 
-  <div class="vtuber-grid">
-    <div class="vtuber-card">
-      <div class="avatar">🦊</div>
-      <h3>Kitsu</h3>
-      <p class="status live">● En vivo</p>
-      <p class="tags">Gaming · Just Chatting</p>
-    </div>
+    <div class="vtuber-grid">
+      <article class="vtuber-card">
+        <div class="avatar">🦊</div>
+        <h3>Kitsu</h3>
+        <p class="status live">● En vivo</p>
+        <p class="tags">Gaming · Charlas</p>
+      </article>
 
-    <div class="vtuber-card">
-      <div class="avatar">🐱</div>
-      <h3>Miko</h3>
-      <p class="status offline">● Offline</p>
-      <p class="tags">Arte · Charlas</p>
-    </div>
+      <article class="vtuber-card">
+        <div class="avatar">🐱</div>
+        <h3>Miko</h3>
+        <p class="status offline">● Offline</p>
+        <p class="tags">Arte · Comunidad</p>
+      </article>
 
-    <div class="vtuber-card postulate">
-      <h3>¿Querés estar acá?</h3>
-      <button class="btn btn-primary" onclick="location.href='#contacto'">
-        Postulate
-      </button>
+      <article class="vtuber-card postulate">
+        <h3>¿Querés estar acá?</h3>
+        <button class="btn btn-primary" onclick="location.href='#contacto'">
+          Postularse
+        </button>
+      </article>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- CONTACTO -->
   <section class="contact reveal" id="contacto">
     <h2>Contacto</h2>
-    <p>Escribinos y nos ponemos en contacto.</p>
+    <p>Escribinos y te respondemos.</p>
 
     <form
       class="contact-form"
@@ -124,20 +230,56 @@
       <input type="email" name="email" placeholder="Email" required>
       <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
 
-      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      <button type="submit" class="btn btn-primary">
+        Enviar mensaje
+      </button>
     </form>
 
     <p id="form-success" class="form-success">
-      ✅ Mensaje enviado correctamente. Te responderemos pronto.
+      Mensaje enviado correctamente. Te responderemos pronto.
     </p>
   </section>
 
 </main>
 
+<!-- REDES -->
+<section id="redes" class="external-links reveal">
+  <h2>Seguinos</h2>
+
+  <div class="socials-grid">
+    <a href="https://youtube.com/@nexovt2026?si=58zW0Vxb6Le1VROf"
+       target="_blank" rel="noopener"
+       class="social-card youtube">
+      ▶️ YouTube
+      <span>Videos y anuncios</span>
+    </a>
+
+    <a href="https://www.instagram.com/nexovt2026?igsh=d21qYmhlNDhpZW9q"
+       target="_blank" rel="noopener"
+       class="social-card instagram">
+      📸 Instagram
+      <span>Noticias y clips</span>
+    </a>
+
+    <a href="https://discord.gg/9uBsZtvRv"
+       target="_blank" rel="noopener"
+       class="social-card discord">
+      💬 Discord
+      <span>Comunidad oficial</span>
+    </a>
+  </div>
+</section>
+
+<p style="text-align:center; color: var(--muted); font-size: 0.9rem; margin: 2rem;">
+  NexoVt no es una agencia ni representa contratos comerciales.
+  Es un proyecto comunitario independiente.
+</p>
+
 <footer>
-  <p>&copy; 2026 NexoVt - Agencia Profesional de VTubers</p>
+  <p>© 2026 NexoVt — Comunidad de apoyo para VTubers</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
+<button id="scrollTop" title="Ir arriba">⬆️</button>
 </body>
 </html>
